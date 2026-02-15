@@ -44,6 +44,3 @@ jobs:
 
       - name: Push
         run: dotnet nuget push **\*.nupkg --source 'https://api.nuget.org/v3/index.json' --api-key ${{ secrets.NUGETAPIKEY }} --skip-duplicate
-
-      - name: Push Symbols
-        run: dotnet nuget push **\*.snupkg --source 'https://api.nuget.org/v3/index.json' --api-key ${{ secrets.NUGETAPIKEY }} --skip-duplicate
