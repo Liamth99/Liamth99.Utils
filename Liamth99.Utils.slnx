@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/Liamth99.Utils/Liamth99.Utils.csproj" />
+  <Project Path="test/Utils.Tests/Utils.Tests.csproj" />
+</Solution>

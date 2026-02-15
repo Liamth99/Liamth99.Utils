@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+        <WarningsAsErrors>nullable</WarningsAsErrors>
+
+        <PackageId>Liamth99.Utils</PackageId>
+        <Title>Liamth99 Utils</Title>
+        <Authors>Liam Thompson</Authors>
+        <Description>Some simple utility code I frequently find myself remaking/needing in projects.</Description>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+        <RepositoryUrl>https://github.com/Liamth99/Liamth99.Utils/</RepositoryUrl>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Deterministic>true</Deterministic>
+
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    </PropertyGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="LOCAT" Version="1.5.0" PrivateAssets="all"/>
+    </ItemGroup>
+
+</Project>
