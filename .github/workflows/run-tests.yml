@@ -1,4 +1,4 @@
-name: publish-package.yml
+name: run-tests
 
 on:
   workflow_dispatch:
