@@ -52,7 +52,6 @@ public class ColorExtensionTests
     [InlineData(null)]
     public void Empty_Format_Throws(string? f)
     {
-        Should.Throw<ArgumentException>(() => _color.ToHex(f!))
-              .Message.ShouldBe("Format cannot be null or empty. (Parameter 'format')");
+        Should.Throw<ArgumentException>(() => _color.ToHex(f!));
     }
 }

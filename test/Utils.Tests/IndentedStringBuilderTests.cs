@@ -24,7 +24,7 @@ public class IndentedStringBuilderTests
         sb.AppendLine("Hello");
         sb.Append("World");
 
-        sb.ToString().ShouldBe("Hello\nWorld");
+        sb.ToString().ShouldBe($"Hello{Environment.NewLine}World");
     }
 
     [Fact]
@@ -47,7 +47,7 @@ public class IndentedStringBuilderTests
         sb.AppendLine("Hello");
         sb.AppendLine("World");
 
-        var expected = "    Hello\n    World\n";
+        var expected = $"    Hello{Environment.NewLine}    World{Environment.NewLine}";
 
         sb.ToString().ShouldBe(expected);
     }
@@ -58,9 +58,9 @@ public class IndentedStringBuilderTests
         var sb = new IndentedStringBuilder();
         sb.IndentLevel = 1;
 
-        sb.Append("Hello\nWorld");
+        sb.Append($"Hello{Environment.NewLine}World");
 
-        var expected = "    Hello\n    World";
+        var expected = $"    Hello{Environment.NewLine}    World";
 
         sb.ToString().ShouldBe(expected);
     }
@@ -148,7 +148,7 @@ public class IndentedStringBuilderTests
         """
         if (true)
         {
-        
+
         """;
 
         sb.ToString().ShouldBe(expected);
@@ -170,7 +170,7 @@ public class IndentedStringBuilderTests
         {
             Console.WriteLine("Hi");
         }
-        
+
         """;
 
         sb.ToString().ShouldBe(expected);
@@ -192,7 +192,7 @@ public class IndentedStringBuilderTests
         [
             Inside
         ]
-        
+
         """;
 
         sb.ToString().ShouldBe(expected);
